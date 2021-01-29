@@ -1,12 +1,12 @@
+// TDD:
+
+
 // Business Logic
 
-//Create object constructor for pizza
 function Pizza() {
-  this.size = size;
-  this.toppings = [];
-  // this.toppingsCost = 0;
-  // this.sizeCost = 0;
-  this.totalPizzaCost = 0;
+  this.size = size,
+  this.toppings = [],
+  this.totalPizzaCost = 0
 }
 
 Pizza.prototype.addSize = function(size) {
@@ -22,24 +22,16 @@ Pizza.prototype.calculatePrice = function() {
     this.price += 12;
   } else if (this.size === "medium") {
     this.price += 18;
-  } else (this.size === "large") {
+  } else if (this.size === "large") {
     this.price += 24;
   }
+  for (let index=0; i < this.toppings.length; i++) {
+    const threeDollarToppings = ["pepperoni", "salami", "bacon"];
+    const twoDollarToppings = ["anchovies", "feta", "canadian bacon", "basil"]
+    const oneDollarToppings = ["olives", "pineapple", "mushrooms", "garlic"]
+  }
 
-
-
-// Pizza.prototype.addSize = function(size) {
-//   this.size = size;
-//   if (this.size === "small") {
-//     this.totalPizzaCost = 10;
-//   } else if (this.size === "medium") {
-//     this.totalPizzaCost === 15;
-//   } else {
-//     this.totalPizzaCost = 20;
-//   }
-// }
-
-
+  
 
 
 
@@ -47,5 +39,4 @@ Pizza.prototype.calculatePrice = function() {
 // User Interface Logic
 
 $(document).ready(function() {
-
-})
+  $("form#order-form").submit(function(event) {
