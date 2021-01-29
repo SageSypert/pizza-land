@@ -12,12 +12,15 @@
 // Business Logic
 
 function Pizza(customerName, toppings, size) {
-  this.customerName = customerName
-  this.toppings = toppings
-  this.size = size
+  this.customerName = customerName;
+  this.toppings = toppings;
+  this.size = size;
+  this.baseCost = 10;
 }
 
-
+Pizza.prototype.pizzaCost = function() {
+  
+}
 
 
 
