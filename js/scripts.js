@@ -3,39 +3,34 @@
 
 // Business Logic
 
-function Pizza() {
+function Pizza(size, toppings, totalPizzaCost) {
   this.size = size;
-  this.toppings = [];
+  this.toppings = 0;
   this.totalPizzaCost = 0;
 }
 
-Pizza.prototype.addSize = function(size) {
-  this.size = size;
-}
+// Pizza.prototype.addSize = function(size) {
+//   this.size = size;
+// }
 
-Pizza.prototype.calculateSizePrice = function() {
+Pizza.prototype.calculatePrice = function() {
   if (this.size === "small") {
     this.totalPizzaCost += 12;
   } else if (this.size === "medium") {
     this.totalPizzaCost += 18;
-  } else if (this.size === "large") {
+  } else {
     this.totalPizzaCost += 24;
-  } else {
-    alert("Please select size")
   }
-}
-  
-Pizza.prototype.addTopping = function() {
-  if (this.toppings === "olives" || "pineapple" || "mushrooms" || "garlic" || "cheese") {
-    this.totalPizzaCost += 1;
-  } else if (this.toppings === "anchovies" || "feta" || "canadian bacon" || "basil") {
-    this.totalPizzaCost += 2;
-  } else if (this.toppings === "pepperoni" || "salami" || "bacon") {
-    this.totalPizzaCost += 3;
+  if (this.toppings <= 4) {
+    this.totalPizzaCost += 4;
+  } else if (this.toppings >= 5 && this.toppings <= 8) {
+    this.totalPizzaCost += 8;
+  } else if (this.toppings >= 9 && this.toppings <= 12) {
+    this.totalPizzaCost += 12;
   } else {
-    alert("Please choose at least one topping")
+    alert("Please choose at least one option!");
   }
-}
+} 
   
   // for (let index=0; i < this.toppings.length; i++) {
   //   const threeDollarToppings = ["pepperoni", "salami", "bacon"];
@@ -46,3 +41,7 @@ Pizza.prototype.addTopping = function() {
 
 $(document).ready(function() {
   $("form#order-form").submit(function(event) {
+    event.preventDefault();
+    let toppings = parseInt($("#toppings").val());
+  }
+}
