@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <header class="bg-primary py-5 mb-5">
+  <header class="bg-primary py-5 mb-5" id="pizza-background">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
@@ -32,22 +32,37 @@
         <h5>Size:</h5>
         <div class="radio">
           <label>
-            <input type="radio" name="topping" value="small" checked>
+            <input type="radio" name="size" value="small" checked>
             Small
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" name="topping" value="medium" checked>
+            <input type="radio" name="size" value="medium" checked>
             Medium
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" name="topping" value="large" checked>
+            <input type="radio" name="size" value="large" checked>
             Large
           </label>
         </div>
+        <hr>
+        <br>
+
+        <form id="toppings">
+          <div class="form-group">
+            <h5>Please select your toppings:</h5>
+            <input type="checkbox" name="topping" value="pepperoni"> Pepperoni<br>
+            <input type="checkbox" name="topping" value="salami"> Salami<br>
+            <input type="checkbox" name="topping" value="olives"> Olives<br>
+            <input type="checkbox" name="topping" value="pineapple"> Pineapple<br>
+            <input type="checkbox" name="topping" value="anchovies"> Anchovies<br>
+            <input type="checkbox" name="topping" value="feta"> Feta<br>
+            <input type="checkbox" name="topping" value="mushrooms"> Mushrooms<br>
+          </div>
+          <br>
         <a class="btn btn-primary btn-lg" href="#">Submit Order</a>
         </form>
       </div>

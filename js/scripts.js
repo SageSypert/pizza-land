@@ -32,8 +32,10 @@ Pizza.prototype.pizzaCost = function() {
 // User Interface Logic
 
 $(document).ready(function() {
+  $("form#toppings").submit(function(event) {
+    event.preventDefault();
+  }
 
-  
 }
 
 const size = $("input:radio[name=topping]:checked").val();
