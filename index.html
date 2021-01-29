@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
@@ -9,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pizzaland</title>
 </head>
+
 <body>
 
   <header class="bg-primary py-5 mb-5" id="pizza-background">
@@ -29,43 +31,50 @@
         <h2>The Finest Pizza in Jersey</h2>
         <h4>Place Your Order Below:</h4>
         <hr>
-        <h5>Size:</h5>
         <form id="order-form">
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="small" id="small" checked>
-            Small
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="medium" id="medium" checked>
-            Medium
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="large" id="large" checked>
-            Large
-          </label>
-        </div>
-        <hr>
+          <label for="name">Please Enter Your Name Here:</label>
+          <input id="name" class="form-control" type="text">
+          <hr>
+          <h5>Size:</h5>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="small" id="small" checked>
+              Small (12") - $12
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="medium" id="medium" checked>
+              Medium (14") - $18
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="large" id="large" checked>
+              Large (16") - $24
+            </label>
+          </div>
+          <hr>
 
           <div class="select-toppings">
             <h5>Please select your toppings:</h5>
-            <input type="checkbox" name="topping" value="pepperoni"> Pepperoni<br>
-            <input type="checkbox" name="topping" value="salami"> Salami<br>
-            <input type="checkbox" name="topping" value="olives"> Olives<br>
-            <input type="checkbox" name="topping" value="pineapple"> Pineapple<br>
-            <input type="checkbox" name="topping" value="anchovies"> Anchovies<br>
-            <input type="checkbox" name="topping" value="feta"> Feta<br>
-            <input type="checkbox" name="topping" value="mushrooms"> Mushrooms<br>
+            <input type="checkbox" name="topping" value="pepperoni"> Pepperoni $3<br>
+            <input type="checkbox" name="topping" value="salami"> Salami $3<br>
+            <input type="checkbox" name="topping" value="olives"> Olives $1<br>
+            <input type="checkbox" name="topping" value="pineapple"> Pineapple $1<br>
+            <input type="checkbox" name="topping" value="anchovies"> Anchovies $2<br>
+            <input type="checkbox" name="topping" value="feta"> Feta $2<br>
+            <input type="checkbox" name="topping" value="mushrooms"> Mushrooms $1<br>
+            <input type="checkbox" name="topping" value="garlic"> Garlic $1<br>
+            <input type="checkbox" name="topping" value="canadian-bacon"> Canadian Bacon $2<br>
+            <input type="checkbox" name="topping" value="basil"> Basil $2<br>
+            <input type="checkbox" name="topping" value="bacon"> Bacon $3<br>
           </div>
           <br>
-        <a class="btn btn-primary btn-lg" href="#">Submit Order</a>
+          <a class="btn btn-primary btn-lg" href="#">Submit Order</a>
         </form>
       </div>
-      
+
       <div class="col-md-4 mb-5">
         <h2>Contact Us</h2>
         <hr>
@@ -84,6 +93,7 @@
         </address>
       </div>
     </div>
-  
+
 </body>
+
 </html>
