@@ -12,15 +12,14 @@
 // Business Logic
 
 function Pizza(customerName, toppings, size) {
-  this.customerName = customerName;
   this.toppings = toppings;
   this.size = size;
   this.baseCost = 10;
 }
 
-Pizza.prototype.pizzaCost = function() {
-
-}
+// Pizza.prototype.pizzaCost = function() {
+//   if (this)
+// }
 
 
 
@@ -34,8 +33,11 @@ Pizza.prototype.pizzaCost = function() {
 $(document).ready(function() {
   $("form#toppings").submit(function(event) {
     event.preventDefault();
-  }
+    $("input:checkbox[name=topping]:checked").each(function() {
+      const toppings = $(this).val();
+    });
+    $("input:radio[name=size]:checked").val();
+  });
+});
 
-}
-
-const size = $("input:radio[name=topping]:checked").val();
+// const size = $("input:radio[name=topping]:checked").val();
