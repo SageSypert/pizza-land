@@ -19,7 +19,7 @@ function Pizza(customerName, toppings, size) {
 }
 
 Pizza.prototype.pizzaCost = function() {
-  
+
 }
 
 
@@ -30,3 +30,10 @@ Pizza.prototype.pizzaCost = function() {
 
 
 // User Interface Logic
+
+$(document).ready(function() {
+
+  
+}
+
+const size = $("input:radio[name=topping]:checked").val();
