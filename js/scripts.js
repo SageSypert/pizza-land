@@ -54,7 +54,14 @@ $(document).ready(function() {
     $("input[name=veggies]:checked").each(function () {
       veggies.push($(this).val());
     });
+
+    let size = $("#size").val();
+    let meat = $("#meat").val();
+    let sauce = $("cheese").val();
     
+    userPizza = Pizza();
+    total = Pizza.totalPizzaCost();
+    $("#confirmation").text("$" + total)
   });
 });
 
