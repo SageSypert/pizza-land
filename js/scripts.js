@@ -41,7 +41,6 @@ Pizza.prototype.calculatePrice = function() {
   }
 
   return this.totalPizzaCost
-
 }
 
 // User Interface Logic
@@ -58,10 +57,12 @@ $(document).ready(function() {
     let size = $("#size").val();
     let meat = $("#meat").val();
     let sauce = $("cheese").val();
+
+    let userPizza = new Pizza(meat, veggies, sauce, size)
     
     userPizza = Pizza();
-    total = Pizza.totalPizzaCost();
-    $("#confirmation").text("$" + total)
+    confirmation = userPizza.totalPizzaCost();
+    $("#confirmation").text("$" + confirmation)
   });
 });
 
