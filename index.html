@@ -6,8 +6,6 @@
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/scripts.js"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pizzaland</title>
 </head>
 
@@ -56,13 +54,31 @@
           </div>
           <hr>
 
-          <div class="select-toppings" id="toppings">
-            <h5>Please select your toppings:</h5>
-            <input type="checkbox" name="topping" value=3> Pepperoni $3<br>
-            <input type="checkbox" name="topping" value=2> Olives $2<br>
-            <input type="checkbox" name="topping" value=1> Cheese Only $1<br>
+          <div class="select-meat" id="meat">
+            <h5>Please select your meat choice(s):</h5>
+            <input type="checkbox" name="meat" value="pepperoni"> Pepperoni<br>
+            <input type="checkbox" name="meat" value="canadian bacon"> Canadian Bacon<br>
+            <input type="checkbox" name="meat" value="salami"> Salami<br>
+            <input type="checkbox" name="meat" value="sausage"> Italian Sausage<br>
+            <input type="checkbox" name="meat" value="chicken"> Roasted Chicken<br>
           </div>
           <br>
+          <div class="select-veggies" id="veggies">
+            <h5>Please select your vegetable choice(s):</h5>
+            <input type="checkbox" name="veggies" value="spinach"> Spinach<br>
+            <input type="checkbox" name="veggies" value="olives"> Olives<br>
+            <input type="checkbox" name="veggies" value="mushrooms"> Mushrooms<br>
+            <input type="checkbox" name="veggies" value="onion"> Onion<br>
+            <input type="checkbox" name="veggies" value="garlic"> Garlic<br>
+          </div>
+          <br>
+          <div class="select-sauce" id="sauce">
+            <h5>Please select your sauce:</h5>
+            <input type="checkbox" name="sauce" value="marinara"> Classic Marinara<br>
+            <input type="checkbox" name="sauce" value="olive-oil"> Buffalo<br>
+            <input type="checkbox" name="veggies" value="garlic"> White Garlic <br>
+            <input type="checkbox" name="veggies" value="pesto"> Basil Pesto<br>
+          </div>
           <a class="btn btn-primary btn-lg" href="#">Submit Order</a>
         </form>
       </div>
@@ -84,8 +100,14 @@
           <a href="mailto:#">pizza@fakepizzaland.com</a>
         </address>
       </div>
+      <div class="card">
+        <div class="card-body" id="order-confirmation">
+          <h4>Your Order Confirmation:</h4>
+
+        </div>
+      </div>
     </div>
+  </div>
 
 </body>
-
 </html>

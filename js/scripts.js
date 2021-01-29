@@ -5,7 +5,8 @@
 
 function Pizza(size, toppings, totalPizzaCost) {
   this.size = size;
-  this.toppings = 0;
+  this.meat = meat;
+  this.toppings = toppings;
   this.totalPizzaCost = 0;
 }
 
@@ -38,39 +39,21 @@ Pizza.prototype.addToppingsCost = function(toppings) {
   }
 }
 
-
-
-
-//   if (this.toppings <= 4) {
-//     this.totalPizzaCost += 4;
-//   } else if (this.toppings >= 5 && this.toppings <= 8) {
-//     this.totalPizzaCost += 8;
-//   } else if (this.toppings >= 9 && this.toppings <= 12) {
-//     this.totalPizzaCost += 12;
-//   } else {
-//     alert("Please choose at least one option!");
-//   }
-// } 
-  
-  // for (let index=0; i < this.toppings.length; i++) {
-  //   const threeDollarToppings = ["pepperoni", "salami", "bacon"];
-  //   const twoDollarToppings = ["anchovies", "feta", "canadian bacon", "basil"]
-  //   const oneDollarToppings = ["olives", "pineapple", "mushrooms", "garlic"]
-
 // User Interface Logic
-let newPizza = new pizzaOrder();
 
 $(document).ready(function() {
   $("form#order-form").submit(function(event) {
     event.preventDefault();
-    let userPizza = new Pizza();
-    let inputSize = $("input:radio[name=size]:checked").val();
-    userPizza.addSize(inputSize);
-    $("input:checkbox[name=topping]:checked").each(function() {
-      let inputTopping = $(this).val();
-      userPizza.addToppingsCost(inputTopping);
-    });
+    
+    let newPizza = new Pizza(inputtedSize, inputtedTopping);
+    const inputtedSize = $("input:radio[name=size]:checked").val();
+    newPizza.addSize(inputSize);
 
-
+  $("input:checkbox[name=topping]:checked").each(function() {
+    let inputtedTopping = $(this).val();
+    newPizza.addToppingsCost(inputTopping);
+  });
+    
   });
 });
+
