@@ -3,7 +3,7 @@
 
 // Business Logic
 
-function Pizza(size, toppings, totalPizzaCost) {
+function Pizza(size, veggies, sauce, meat) {
   this.size = size;
   this.meat = meat;
   this.veggies = veggies;
@@ -21,9 +21,9 @@ Pizza.prototype.calculatePrice = function() {
   } 
 
   this.veggies.forEach(val => {
-    if (["olives", "onion", "spinach"].indexOf(val) != -1) {
+    if (['olives', 'onion', 'spinach'].indexOf(val) != -1) {
       this.totalPizzaCost += 1
-    } else if (["mushrooms", "garlic", "kalamata-olives"].indexOf(val) != -1) {
+    } else if (['mushrooms', 'garlic', 'kalamata-olives'].indexOf(val) != -1) {
       this.totalPizzaCost += 2
     }
   });
@@ -46,23 +46,23 @@ Pizza.prototype.calculatePrice = function() {
 // User Interface Logic
 
 $(document).ready(function() {
-  $("form#order-form").submit(function(event) {
-    event.preventDefault();
+  $('form#order-form').submit(function(event) {
+  event.preventDefault();
     
     let veggies = [];
-    $("input[name=veggies]:checked").each(function () {
+    $('input[name=veggies]:checked').each(function () {
       veggies.push($(this).val());
     });
 
     let size = $("#size").val();
     let meat = $("#meat").val();
-    let sauce = $("cheese").val();
+    let sauce = $("#sauce").val();
 
     let userPizza = new Pizza(meat, veggies, sauce, size)
     
     userPizza = Pizza();
-    confirmation = userPizza.totalPizzaCost();
-    $("#confirmation").text("$" + confirmation)
+    confirmation = userPizza.calculatePrice();
+    $('#confirmation').text("$" + confirmation)
   });
 });
 
