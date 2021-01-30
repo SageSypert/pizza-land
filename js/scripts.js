@@ -30,7 +30,7 @@ $(document).ready(function() {
   $("form#order-form").submit(function(event) {
     event.preventDefault();
 
-  let sizeChoice = $("input:radio[name=size]:checked");
+  let sizeChoice = $("input:radio[name=size]:checked").val();
   let toppingChoice = $("input:checkbox[name=pizzaTopping]:checked");
   let toppingsArray = [];
 
