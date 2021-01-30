@@ -3,26 +3,27 @@
 
 // Business Logic
 
-function Pizza(size, toppings) {
+function Pizza(size, toppings, price) {
   this.size = size;
-  this.toppings = toppings;
+  this.topping1 = topping1;
+  this.topping2 = topping2;
+  this.topping3 = topping3;
+  this.totalToppings = topping1 + topping2 + this.topping3;
+  this.price = 0;
 }
 
 Pizza.prototype.calculatePrice = function(price, toppings) {
-  let price = 0;
-  if (this.size !== 1 && this.size !==2 && this.size !==3) {
-    alert("Please select a size and try again");
-    return price = 0;
-  }
   if (this.size === "small") {
-    price += 12;
+    this.price += 12;
   } else if (this.size === "medium") {
-    price += 18;
+    this.price += 18;
   } else if (this.size === "large") {
-    price += 24;
+    this.price += 24;
+  } else {
+    alert("Please select a size");
   }
   for (let i=0; i < this.toppings.length; i++) {
-    price += 1;
+    this.price += 1;
   }
   this.price = price;
   return price;
@@ -35,19 +36,15 @@ let addToppings = [];
 $(document).ready(function() {
   $('form#order-form').submit(function(event) {
   event.preventDefault();
+  
   let pizzaSize = $("input:radio[name=size]:checked").val();
   $("input:checkbox[name=topping]:checked").each(function() {
-    addToppings.push($(this).val())
+    addToppings.push($(this).val());
   })
 
   let userPizza = new Pizza(pizzaSize, addToppings);
-  let pizzaCost = newPizza.calculatePrice()
+  let pizzaCost = userPizza.calculatePrice()
   $("#showTotal").show().html("Your total pizza cost is $" + pizzaCost);
-
- 
-
-
-    
   });
 });
 
