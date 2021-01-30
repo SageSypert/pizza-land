@@ -11,7 +11,7 @@
 
 <body>
 
-  <header class="bg-primary py-5 mb-5" id="pizza-background" style="background-image:url('https://slice.seriouseats.com/images/20100511-Pizzaland-facade.jpg');>
+  <header class="bg-primary py-5 mb-5" id="pizza-background">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
@@ -33,49 +33,31 @@
           <div class="radio">
             <label>
               <input type="radio" name="size" value="small" id="small" checked>
-              Small (12") - $12
+              Small $12
             </label>
           </div>
           <div class="radio">
             <label>
               <input type="radio" name="size" value="medium" id="medium" checked>
-              Medium (14") - $18
+              Medium $18
             </label>
           </div>
           <div class="radio">
             <label>
               <input type="radio" name="size" value="large" id="large" checked>
-              Large (16") - $24
+              Large $24
             </label>
           </div>
           <hr>
-
-          <div class="select-meat" id="meat">
-            <h5>Please select your meat choice(s):</h5>
-            <input type="checkbox" name="meat" value="pepperoni"> Pepperoni<br>
-            <input type="checkbox" name="meat" value="canadian"> Canadian Bacon<br>
-            <input type="checkbox" name="meat" value="salami"> Salami<br>
-            <input type="checkbox" name="meat" value="sausage"> Italian Sausage<br>
-            <input type="checkbox" name="meat" value="chicken"> Roasted Chicken<br>
-          </div>
-          <br>
-          <div class="select-veggies" id="veggies">
-            <h5>Please select your vegetable choice(s):</h5>
-            <input type="checkbox" name="veggies" value="spinach"> Spinach<br>
-            <input type="checkbox" name="veggies" value="olives"> Olives<br>
-            <input type="checkbox" name="veggies" value="mushrooms"> Mushrooms<br>
-            <input type="checkbox" name="veggies" value="onion"> Onion<br>
-            <input type="checkbox" name="veggies" value="garlic"> Garlic<br>
-            <input type="checkbox" name="veggies" value="kalamata-olives"> Kalamata Olives<br>
-          </div>
-          <br>
-          <div class="select-sauce" id="sauce">
-            <h5>Please select your sauce:</h5>
-            <input type="checkbox" name="sauce" value="marinara"> Classic Marinara<br>
-            <input type="checkbox" name="sauce" value="buffalo"> Buffalo<br>
-            <input type="checkbox" name="sauce" value="garlic"> White Garlic <br>
-            <input type="checkbox" name="sauce" value="pesto"> Basil Pesto<br>
-          </div>
+          <h5>Choose Additional Toppings (all our pizzas come with marinara and mozzarella):</h5>
+          <input type="checkbox" name="topping" id="topping1" value="1">
+          <label for="topping1">Pepperoni</label><br>
+          <input type="checkbox" name="topping" id="topping2" value="1">
+          <label for="topping2">Salami</label><br>
+          <input type="checkbox" name="topping" id="topping1" value="1">
+          <label for="topping1">Mushrooms</label><br>
+          <input type="checkbox" name="topping" id="topping1" value="1">
+          <label for="topping1">Kalamata Olives</label><br>
           <br>
           <a class="btn btn-success btn-md" href="#">Submit Order</a>
         </form>

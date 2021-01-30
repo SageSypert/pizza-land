@@ -3,52 +3,40 @@
 
 // Business Logic
 
-function Pizza(size, veggies, sauce, meat) {
+function Pizza(size, toppings) {
   this.size = size;
-  this.meat = meat;
-  this.veggies = veggies;
-  this.sauce = sauce;
-  this.totalPizzaCost = 0;
+  this.toppings = toppings;
 }
 
-Pizza.prototype.calculatePrice = function() {
+Pizza.prototype.calculatePrice = function(price, toppings) {
+  let price = 0;
+  if (this.size !== 1 && this.size !==2 && this.size !==3) {
+    alert("Please select a size and try again");
+    return price = 0;
+  }
   if (this.size === "small") {
-    this.totalPizzaCost += 12;
+    price += 12;
   } else if (this.size === "medium") {
-    this.totalPizzaCost += 18;
+    price += 18;
   } else if (this.size === "large") {
-    this.totalPizzaCost += 24;
-  } 
-
-  this.veggies.forEach(val => {
-    if (['olives', 'onion', 'spinach'].indexOf(val) != -1) {
-      this.totalPizzaCost += 1
-    } else if (['mushrooms', 'garlic', 'kalamata-olives'].indexOf(val) != -1) {
-      this.totalPizzaCost += 2
-    }
-  });
-
-  if (this.meat === "salami" || this.meat === "pepperoni" || this.meat === "chicken") {
-    this.totalPizzaCost += 2.50
-  } else if (this.meat === "canadian" || this.meat === "sausage") {
-    this.totalPizzaCost += 3
+    price += 24;
   }
-
-  if (this.sauce === "marinara" || this.sauce === "garlic") {
-    this.totalPizzaCost += 1.50
-  } else if (this.sauce === "buffalo" || this.sauce === "pesto") {
-    this.totalPizzaCost += 2
+  for (let i=0; i < this.toppings.length; i++) {
+    price += 1;
   }
-
-  return this.totalPizzaCost
+  this.price = price;
+  return price;
 }
 
 // User Interface Logic
 
+
+
 $(document).ready(function() {
   $('form#order-form').submit(function(event) {
   event.preventDefault();
-  
+  let pizzaSize = $("input:radio[name=size]:checked").val();
+  console.log(pizzaSize)
 
 
     
