@@ -48,21 +48,10 @@ Pizza.prototype.calculatePrice = function() {
 $(document).ready(function() {
   $('form#order-form').submit(function(event) {
   event.preventDefault();
-    
-    let veggies = [];
-    $('input[name=veggies]:checked').each(function () {
-      veggies.push($(this).val());
-    });
+  
 
-    let size = $("#size").val();
-    let meat = $("#meat").val();
-    let sauce = $("#sauce").val();
 
-    let userPizza = new Pizza(meat, veggies, sauce, size)
     
-    userPizza = Pizza();
-    confirmation = userPizza.calculatePrice();
-    $('#confirmation').text("$" + confirmation)
   });
 });
 
