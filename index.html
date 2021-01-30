@@ -16,7 +16,7 @@
         <h2>Don't Disrespect the Pizza Parlor</h2>
         <h4>Place Your Order Below:</h4>
         <hr>
-        <form id="order-form">
+        <form id="order-form" id="size">
           <h5>Size:</h5>
           <div class="radio">
             <label>
@@ -52,35 +52,37 @@
           <button class="btn btn-success" type="submit">Submit Order</button>
         </form>
         <br>
-        <div id="orderConfirmation">
-          <h5>Your Order Confirmation:</h5>
-            <p>You ordered a <span class="returnOrder" id="sizeChoice"></span> pizza with the following toppings:<br>
-              <span class="returnOrder" id="toppingsOutput"></span><br>
-              Your order will be ready for pick-up in 25-30 minutes.
-              Your order total is: <br>
-              <span class="returnOrder" id="costOutput"></span></p>
-        </div>
-        </div>
-      </div>
 
-      <div class="col-md-4 mb-5">
-        <h2>Contact Us</h2>
-        <hr>
-        <address>
-          <strong>Pizza Land</strong>
-          <br>1000 Gabagool Ave
-          <br>Newark, NJ 07031
-          <br>
-        </address>
-        <address>
-          <abbr title="Phone">P:</abbr>
-          (123) 456-7890
-          <br>
-          <abbr title="Email">E:</abbr>
-          <a href="mailto:#">pizza@fakepizzaland.com</a>
-        </address>
-        <img src="img/pizzaland3.jpg">
+        <h5>Your Order Confirmation:</h5>
+        <div class="orderConfirmation">
+          <p>You ordered a <span class="returnOrder" id="sizeChoice"></span> pizza with the following toppings:<br>
+            <span class="returnOrder" id="toppingsChoice"></span><br>
+            Your order will be ready for pick-up in 25-30 minutes.
+            <br>
+            <p class="orderTotal">Your order total is: </p><br>
+            <span class="returnOrder" id="costOutput"></span>
+          </p>
+        </div>
       </div>
+    </div>
+
+    <div class="col-md-4 mb-5">
+      <h2>Contact Us</h2>
+      <hr>
+      <address>
+        <strong>Pizza Land</strong>
+        <br>1000 Gabagool Ave
+        <br>Newark, NJ 07031
+        <br>
+      </address>
+      <address>
+        <abbr title="Phone">P:</abbr>
+        (123) 456-7890
+        <br>
+        <abbr title="Email">E:</abbr>
+        <a href="mailto:#">pizza@fakepizzaland.com</a>
+      </address>
+      <img src="img/pizzaland3.jpg">
     </div>
   </div>
 

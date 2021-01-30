@@ -1,7 +1,7 @@
 // TDD:
 
 
-// Business Logic
+// Business Logic:
 
 function Pizza(size, toppings) {
   this.size = size,
@@ -24,38 +24,30 @@ Pizza.prototype.calculateToppings = function(toppings) {
     this.price += 2;
 };
 
-
-//   if (this.size === "1") {
-//     price += 12;
-//   } else if (this.size === "2") {
-//     price += 18;
-//   } else if (this.size === "3") {
-//     price += 24;
-//   } 
-//   for (let i=0; i < this.toppings.length; i++) {
-//     price += 1;
-//   }
-//   this.price = price;
-//   return price;
-// }
-
-// User Interface Logic
-
-// let addToppings = [];
+// User Interface Logic:
 
 $(document).ready(function() {
   $("form#order-form").submit(function(event) {
-  event.preventDefault();
-  let toppingChoices = 
-  
-  let pizzaSize = parseInt($("input:radio[name=size]:checked").val());
-  $("input:checkbox[name=topping]:checked").each(function() {
-    addToppings.push($(this).val());
+    event.preventDefault();
+
+  let sizeChoice = $("#size").val(); //verify this works
+  let toppingChoice = $("input:checkbox[name=pizzaTopping]:checked");
+  let toppingsArray = [];
+
+  toppingChoice.each(function() {
+    toppingsArray.push($(this).val());
   })
 
-  let userPizza = new Pizza(pizzaSize, addToppings);
-  let pizzaCost = userPizza.calculatePrice()
-  $("#showTotal").show().html("Your total pizza cost is $" + pizzaCost);
-  });
-});
+  let userPizza = new Pizza (sizeChoice, toppingsArray);
+  userPizza.calculateSize();
+  userPizza.calculateToppings();
 
+  $(".orderConfirmation").show();
+  $("#sizeChoice").text(userPizza.size);
+
+  let toppingString = (userPizza.toppings).join(", ");
+  $("#toppingsChoice").text(toppingString);
+  $("#costOutput").text("$" + userPizza.price);
+
+  })
+});

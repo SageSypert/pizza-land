@@ -5,3 +5,7 @@
 body {
   background-color: rgba(248, 244, 244, 0.884);
 }
+
+.orderTotal {
+  font-weight: bold;
+}
