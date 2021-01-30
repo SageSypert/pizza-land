@@ -20,37 +20,46 @@
           <h5>Size:</h5>
           <div class="radio">
             <label>
-              <input type="radio" name="size" value="1" id="small" checked>
+              <input type="radio" name="size" value="small" id="small" checked>
               Small $12
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="size" value="2" id="medium" checked>
+              <input type="radio" name="size" value="medium" id="medium" checked>
               Medium $18
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="size" value="3" id="large" checked>
+              <input type="radio" name="size" value="large" id="large" checked>
               Large $24
             </label>
           </div>
           <hr>
-          <h5>Choose Additional Toppings (all our pizzas come with marinara and mozzarella):</h5>
-          <input type="checkbox" name="topping" id="topping1" value="1">
-          <label for="topping1">Pepperoni</label><br>
-          <input type="checkbox" name="topping" id="topping2" value="1">
-          <label for="topping2">Salami</label><br>
-          <input type="checkbox" name="topping" id="topping3" value="1">
-          <label for="topping3">Mushrooms</label><br>
-          <input type="checkbox" name="topping" id="topping4" value="1">
-          <label for="topping4">Peppers (for some bada bing!)</label><br>
+          <h5>Choose your meat topping(s):</h5>
+          <input type="checkbox" class="topping" name="pizzaTopping" value="pepperoni"> Pepperoni<br>
+          <input type="checkbox" class="topping" name="pizzaTopping" value="salami"> Salami<br>
+          <input type="checkbox" class="topping" name="pizzaTopping" value="chicken"> Roasted Chicken<br>
+          <input type="checkbox" class="topping" name="pizzaTopping" value="sausage"> Italian Sausage<br>
+          <br>
+          <h5>Choose your veggie topping(s):</h5>
+          <input type="checkbox" name="pizzaTopping" value="onion"> Onion<br>
+          <input type="checkbox" name="pizzaTopping" value="spinach"> Spinach<br>
+          <input type="checkbox" name="pizzaTopping" value="mushrooms"> Mushrooms<br>
+          <input type="checkbox" name="pizzaTopping" value="peppers"> Bell Peppers (for that extra Bada Bing!)<br>
           <br>
           <button class="btn btn-success" type="submit">Submit Order</button>
         </form>
         <br>
-        <div id="showTotal">
+        <div id="orderConfirmation">
+          <h5>Your Order Confirmation:</h5>
+            <p>You ordered a <span class="returnOrder" id="sizeChoice"></span> pizza with the following toppings:<br>
+              <span class="returnOrder" id="toppingsOutput"></span><br>
+              Your order will be ready for pick-up in 25-30 minutes.
+              Your order total is: <br>
+              <span class="returnOrder" id="costOutput"></span></p>
+        </div>
         </div>
       </div>
 

@@ -4,34 +4,49 @@
 // Business Logic
 
 function Pizza(size, toppings) {
-  this.size = size;
-  this.toppings = toppings;
+  this.size = size,
+  this.toppings = toppings,
+  this.price = 0
 }
 
-Pizza.prototype.calculatePrice = function(price, toppings) {
-  if (this.size === "1") {
-    price += 12;
-  } else if (this.size === "2") {
-    price += 18;
-  } else if (this.size === "3") {
-    price += 24;
+Pizza.prototype.calculateSize = function(size) {
+  if (this.size === "small") {
+    this.price += 12;
+  } else if (this.size === "medium") {
+    this.price += 16;
   } else {
-    alert("Please select a size");
+    this.price += 20;
   }
-  for (let i=0; i < this.toppings.length; i++) {
-    price += 1;
-  }
-  this.price = price;
-  return price;
 }
+
+Pizza.prototype.calculateToppings = function(toppings) {
+  for (let i = 0; i < this.toppings.length; i++)
+    this.price += 2;
+};
+
+
+//   if (this.size === "1") {
+//     price += 12;
+//   } else if (this.size === "2") {
+//     price += 18;
+//   } else if (this.size === "3") {
+//     price += 24;
+//   } 
+//   for (let i=0; i < this.toppings.length; i++) {
+//     price += 1;
+//   }
+//   this.price = price;
+//   return price;
+// }
 
 // User Interface Logic
 
-let addToppings = [];
+// let addToppings = [];
 
 $(document).ready(function() {
-  $('form#order-form').submit(function(event) {
+  $("form#order-form").submit(function(event) {
   event.preventDefault();
+  let toppingChoices = 
   
   let pizzaSize = parseInt($("input:radio[name=size]:checked").val());
   $("input:checkbox[name=topping]:checked").each(function() {
