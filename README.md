@@ -1,19 +1,23 @@
 # _PizzaLand Project_
 
-#### _Webpage made for week-4 independent project with Epicodus. Basic webpage to act as a pizza ordering site._
+#### _Week 4 Epicodus Independent Project: A pizza ordering form using object-oriented JavaScript_
 
 #### By _Sage Sypert_
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _HTML_          
+* _CSS_
+* _JavaScript_
+* _jQuery 3.5.1_
+* _Bootstrap_
+* _GitHub_
+* _Git Bash_
+* _Visual Studio Code_
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This is a basic webpage that will allow you to "order" a pizza by selecting a size, one or more toppings, and then see the final cost of that pizza. This webpage was created to fulfill the independent project requirements for my fourth week at Epicodus._
 
 ## Setup/Installation Requirements
 
@@ -27,13 +31,14 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No Known Issues_
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_MIT License_
+
+Copyright (c) 2021 Sage Sypert
 
 ## Contact Information
 
-_{Add your contact information here.}_
+_Sage Sypert <sage.sypert@gmail.com>
