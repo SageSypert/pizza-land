@@ -30,13 +30,21 @@ Pizza.prototype.calculatePrice = function(price, toppings) {
 
 // User Interface Logic
 
-
+let addToppings = [];
 
 $(document).ready(function() {
   $('form#order-form').submit(function(event) {
   event.preventDefault();
   let pizzaSize = $("input:radio[name=size]:checked").val();
-  console.log(pizzaSize)
+  $("input:checkbox[name=topping]:checked").each(function() {
+    addToppings.push($(this).val())
+  })
+
+  let userPizza = new Pizza(pizzaSize, addToppings);
+  let pizzaCost = newPizza.calculatePrice()
+  $("#showTotal").show().html("Your total pizza cost is $" + pizzaCost);
+
+ 
 
 
     
