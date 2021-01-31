@@ -15,3 +15,7 @@ body {
   width: 400px;
   margin-top: 20px;
 }
+
+.disrespect {
+  font-style: italic;
+}
