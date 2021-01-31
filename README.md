@@ -21,13 +21,28 @@ _This is a basic webpage that will allow you to "order" a pizza by selecting a s
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _To view this webpage, follow this [link](https://sagesypert.github.io/pizza-land/) in a modern browser_
+* _You can also use git to make a copy of this project with your terminal by inputting the following commands:  $ cd directory (of your choice), then:  $ git clone https://github.com/sagesypert/mr-robogers-neighborhood.git_
+* _Remove all remotes pointing to my directory by typing:  $ git remote rm origin_
+* _Add your own remote repository by typing:  $ git remote add (location nickname) followed by your repository's URL_
+* _Access your copied files wherever you prefer to code! You can do this by typing in your terminal:  $ code ._
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+## Specifications
+
+**Describe:** Pizza()
+**Test:** Creates pizza object before size and topping choices are applied
+**Code:** let userPizza = new Pizza();
+**Expect:** (Pizza.toEqual(Pizza{ [],}));
+
+**Describe:** Pizza.prototype.calculateSize
+**Test:** It will add up total cost of a pizza depending on what size the user selects from the base cost of zero.
+**Code:** pizza.calculateSize();
+**Expect:** (Pizza.pizzaPrice["large"].toEqual([totalCost + 10]));
+
+**Describe:** Pizza.prototype.calculateToppings
+**Test:** It will add $2 for each counted index in the toppings array.
+**Code:** pizza.calculateToppings();
+**Expect:** (Pizza.pizzaPrice.toppings["mushrooms"].toEqual([2]));
 
 ## Known Bugs
 

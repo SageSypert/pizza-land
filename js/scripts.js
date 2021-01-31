@@ -1,7 +1,21 @@
 // TDD:
 
+// Describe: Pizza()
+// Test: Creates pizza object before size and topping choices are applied
+// Code: let userPizza = new Pizza();
+// Expect: (Pizza.toEqual(Pizza{ [],}));
 
+// Describe: Pizza.prototype.calculateSize
+// Test: It will add up total cost of a pizza depending on what size the user selects from the base cost of zero.
+// Code: pizza.calculateSize();
+// Expect: (Pizza.pizzaPrice["large"].toEqual([totalCost + 10]));
 
+// Describe: Pizza.prototype.calculateToppings
+// Test: It will add $2 for each counted index in the toppings array.
+// Code: pizza.calculateToppings();
+// Expect: (Pizza.pizzaPrice.toppings["mushrooms"].toEqual([2]));
+
+// Describe: 
 
 // Business Logic:
 
