@@ -17,8 +17,9 @@ Pizza.prototype.calculateSize = function(size) {
 }
 
 Pizza.prototype.calculateToppings = function(toppings) {
-  for (let i = 0; i < this.toppings.length; i++)
+  for (let i = 0; i < this.toppings.length; i++) {
     this.price += 2;
+  }
 };
 
 // User Interface Logic:
