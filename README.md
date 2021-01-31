@@ -1,6 +1,6 @@
 # _PizzaLand Project_
 
-#### _Week 4 Epicodus Independent Project: A pizza ordering form using object-oriented JavaScript_
+#### _Week 4 Epicodus Independent Project: A pizza ordering form using Object-Oriented JavaScript_
 
 #### By _Sage Sypert_
 
@@ -22,7 +22,7 @@ _This is a basic webpage that will allow you to "order" a pizza by selecting a s
 ## Setup/Installation Requirements
 
 * _To view this webpage, follow this [link](https://sagesypert.github.io/pizza-land/) in a modern browser_
-* _You can also use git to make a copy of this project with your terminal by inputting the following commands:  $ cd directory (of your choice), then:  $ git clone https://github.com/sagesypert/mr-robogers-neighborhood.git_
+* _You can also use git to make a copy of this project with your terminal by inputting the following commands:  $ cd directory (of your choice), then:  $ git clone https://github.com/sagesypert/pizza-land.git_
 * _Remove all remotes pointing to my directory by typing:  $ git remote rm origin_
 * _Add your own remote repository by typing:  $ git remote add (location nickname) followed by your repository's URL_
 * _Access your copied files wherever you prefer to code! You can do this by typing in your terminal:  $ code ._
@@ -56,4 +56,4 @@ Copyright (c) 2021 Sage Sypert
 
 ## Contact Information
 
-_Sage Sypert <sage.sypert@gmail.com>
+_Sage Sypert <sage.sypert@gmail.com>_
