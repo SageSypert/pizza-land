@@ -59,10 +59,10 @@
 
           <hr>
           <h5>Choose your meat topping(s):</h5>
-          <input type="checkbox" class="topping" name="pizzaTopping" value="pepperoni"> Pepperoni<br>
-          <input type="checkbox" class="topping" name="pizzaTopping" value="salami"> Salami<br>
-          <input type="checkbox" class="topping" name="pizzaTopping" value="chicken"> Roasted Chicken<br>
-          <input type="checkbox" class="topping" name="pizzaTopping" value="sausage"> Italian Sausage<br>
+          <input type="checkbox" name="pizzaTopping" value="pepperoni"> Pepperoni<br>
+          <input type="checkbox" name="pizzaTopping" value="salami"> Salami<br>
+          <input type="checkbox" name="pizzaTopping" value="chicken"> Roasted Chicken<br>
+          <input type="checkbox" name="pizzaTopping" value="sausage"> Italian Sausage<br>
           <br>
           <h5>Choose your veggie topping(s):</h5>
           <input type="checkbox" name="pizzaTopping" value="onion"> Onion<br>
@@ -77,7 +77,7 @@
         <div class="orderConfirmation">
           <h5>Your Order Confirmation:</h5>
           <p>You ordered a <span id="sizeChoice"></span> pizza with the following toppings:<br>
-            <span class="returnOrder" id="toppingsChoice"></span><br>
+            <span id="toppingsChoice"></span><br>
           <p id="pickup">Your order will be ready for pick-up in 25-30 minutes.</p><br>
           <p>Your order total is: </p>
           <span id="costOutput"></span>
